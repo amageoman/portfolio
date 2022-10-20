@@ -1,0 +1,193 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/backpaper.jpg);
+}
+
+
+
+
+
+
+.header{
+
+    display:grid;
+    
+    grid-template-areas: 
+    "img img  li1 li2 li3   li4"
+    ;
+    align-items: center;
+    
+   
+    padding: 0;
+    background-color: rgba(255, 255, 255,0.1);
+    margin: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top:50px;
+    gap:0px;
+    color:white;
+}
+
+.header a{
+    text-decoration: none;
+    
+    color: white;
+    
+    /* background-color: black; */
+  
+}
+
+.three:hover,.four:hover,.five:hover,.six:hover {
+   
+    transform: translateY(-10px) rotateY(360deg) scale(1.5) ;
+    
+    
+}
+
+.three:hover a,.four:hover a,.five:hover a,.six:hover a,.two:hover a{
+
+    color:gold;
+}
+
+.header div{
+
+   /* background-color: aqua; */
+   text-align: center;
+   padding: .5rem .5rem;
+   transition: .7s ease-out;
+}
+
+.header img{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+label{
+
+    display: none;
+}
+ .menubar i{
+    color:white;
+    position: fixed;
+    z-index: 1;
+    top:10px;
+    left:25px;
+    
+
+}
+
+#menubar{
+
+    display:none
+}
+#menubar:checked  + .header{
+    margin-top: 0px;
+    height:auto;
+width:100px;
+display:contents;
+align-items:left;
+font-size: x-small;
+/* background-color: aqua; */
+
+
+
+}
+
+#menubar:checked  + .header div{
+    margin-top: 30px;
+    text-align: left;
+    
+}
+#menubar:checked  + .header .three:hover,
+#menubar:checked  + .header .four:hover,
+#menubar:checked  + .header .five:hover,
+#menubar:checked  + .header .six:hover{
+
+    transform: scale(1) translateX(10px);
+}
+
+#menubar:checked  + .header .two{
+
+    display:none;
+}
+
+#menubar:checked  + .header .one img{
+
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+#menubar:checked  + .header .one img:hover{
+
+    transform: scale(1);
+}
+
+#menubar:checked  + .header div{
+
+    width:70px;
+}
+
+.one img{
+    grid-area: img;
+    
+}
+
+    
+   
+
+
+.three{
+    grid-area: li1;
+}
+.four{
+    grid-area: li2;
+}
+.five{
+    grid-area: li3;
+}
+
+.six{
+    grid-area: li4;
+}
+
+.one img:hover{
+
+    transform: scale(3) translateY(20px);
+    transform-origin:left;
+    border-radius: 0px;
+    
+}
+
+@media(max-width:500px){
+
+    label{
+    display:initial;
+   }
+ 
+   .header{
+
+    display: none;
+   }
+
+   
+}
+@media(min-width:500px) and (max-width:800px)
+{
+/* label{
+display: initial;
+}
+   
+   
+   .header{
+
+    display: none;
+   } */
+
+   
+   
+    
+}
