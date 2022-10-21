@@ -5,27 +5,65 @@ body{
     background-image: url(./images/backpaper.jpg);
 }
 
+.topsec{
+    width: 100%;
+    top:0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    position: sticky;
+    top:0px;
+}
 
+.top{
 
+    
+  margin-left: 30px;
+    color:black;
+    
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.top:first-child{
+    text-align: center;
 
+    
+}
+
+.top a{
+
+    color:black;
+}
+
+.top i:hover{
+
+    transform:scale(1.5);
+}
+
+.maa{
+    position: sticky;
+    top:70px;
+}
 
 .header{
 
-    display:grid;
+    display:flex;
+    justify-content: space-around;
     
-    grid-template-areas: 
-    "img img  li1 li2 li3   li4"
-    ;
+    
     align-items: center;
-    
+    height:30px;
    
     padding: 0;
     background-color: rgba(255, 255, 255,0.1);
     margin: 0;
     box-sizing: border-box;
     position: sticky;
-    top:50px;
+    
     gap:0px;
     color:white;
 }
@@ -39,14 +77,14 @@ body{
   
 }
 
-.three:hover,.four:hover,.five:hover,.six:hover {
+.one:hover,.two:hover,.three:hover,.four:hover {
    
-    transform: translateY(-10px) rotateY(360deg) scale(1.5) ;
+    transform: translateY(-5px) rotateY(360deg) scale(1.2) ;
     
     
 }
 
-.three:hover a,.four:hover a,.five:hover a,.six:hover a,.two:hover a{
+.one:hover a,.two:hover a,.three:hover a,.four:hover a{
 
     color:gold;
 }
@@ -59,31 +97,28 @@ body{
    transition: .7s ease-out;
 }
 
-.header img{
-    width:60px;
-    height: 60px;
-    border-radius: 50%;
-}
 
 
 
-#close {
-    color:white;
+
+#close i{
+    color:black;
     position: fixed;
-    z-index: 2;
-    top:10px;
-    left:25px;
-    display: none;
+    /* z-index: 2; */
+    top:15px;
+    left:15px;
+    opacity: 0;
     
     
 }
  #bar i{
-    color:white;
+    color:black;
     position: fixed;
-    z-index: 1;
-    top:10px;
-    left:25px;
+    /* z-index: 1; */
+    top:15px;
+    left:15px;
     /* display: none; */
+    opacity: 1;
     
 
 }
@@ -92,6 +127,15 @@ body{
 
     display:none;
 }
+
+
+#menubar:checked  + .maa{
+
+   position: fixed;
+}
+
+
+
 #menubar:checked  + .maa .header{
     margin-top: 0px;
     height:auto;
@@ -99,100 +143,77 @@ width:100px;
 display:contents;
 align-items:left;
 font-size: x-small;
+
 /* background-color: aqua; */
 
 
 
 }
 
-#menubar:checked + .maa #close  {
+#menubar:checked + .maa #close  i{
 
-    display: initial;
+    opacity: 1;
 }
-#menubar:checked + .maa #bar  {
+#menubar:checked + .maa #bar i {
 
-    display: none;
+    opacity: 0;
 }
 
 #menubar:checked  + .maa .header div{
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: left;
     
+    
 }
-#menubar:checked  + .header .three:hover,
-#menubar:checked  + .header .four:hover,
-#menubar:checked  + .header .five:hover,
-#menubar:checked  + .header .six:hover{
+
+#menubar:checked  + .maa .header .one{
+
+    margin-top: 0px;
+}
+#menubar:checked  + .maa .header .three:hover,
+#menubar:checked  + .maa .header .four:hover,
+#menubar:checked  + .maa .header .five:hover,
+#menubar:checked  + .maa .header .six:hover{
 
     transform: scale(1) translateX(10px);
 }
 
-#menubar:checked  + .maa .header .two{
 
-    display:none;
-}
 
-#menubar:checked  + .header .one img{
 
-    width:50px;
-    height:50px;
-    border-radius: 50%;
-}
 
-#menubar:checked  + .header .one img:hover{
 
-    transform: scale(1);
-}
 
-#menubar:checked  + .header div{
+#menubar:checked  + .maa .header div{
 
     width:70px;
 }
 
-.one img{
-    grid-area: img;
-    
-}
+
 
     
    
 
 
-.three{
-    grid-area: li1;
-}
-.four{
-    grid-area: li2;
-}
-.five{
-    grid-area: li3;
-}
 
-.six{
-    grid-area: li4;
-}
-
-.one img:hover{
-
-    transform: scale(3) translateY(20px);
-    transform-origin:left;
-    border-radius: 0px;
-    
-}
 
 @media(max-width:500px){
-
-   
-
- 
- 
-   .header{
+.maa .header{
 
     display: none;
    }
 
+.maa label{
+
+    display: initial;
+}
+   .top{
+font-size: small;
+
+   }
    
 }
+
 @media(min-width:500px) and (max-width:800px)
 {
 /* label{
@@ -211,7 +232,7 @@ display: initial;
 }
 @media(min-width:500px){
 
-    label{
+    .maa label{
 
         display: none;
       }
