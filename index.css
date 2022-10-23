@@ -1,7 +1,8 @@
 :root{
-    --bgcolor:#020c1b;
-    --green:#64ffda;
-    --shade: rgba(100,255,218,0.3);
+    --bgcolor:#01070f;
+    --green:#54dfbe;
+    --shade: rgba(100,200,218,0.2);
+    --vibe:rgb(230, 230, 230);
 }
 
 *{
@@ -148,17 +149,28 @@ margin-right: 30px;
     "exp exp proj"
     "qual qual proj";
 
-    gap:20px;
+    gap:30px;
 }
 
 .area-hi{
     grid-area: hi;
     padding-top: 10px;
     padding-bottom: 30px;
-    
+    animation:dhe_vannu 1.2s ease-in-out .5s backwards ;
     /* background-color: aliceblue; */
 }
 
+
+@keyframes dhe_vannu{
+0%{
+    transform: translateX(-900px);
+}
+100%{
+
+    display: initial;
+}
+
+}
 
 
 /* HI DIV */
@@ -194,7 +206,7 @@ animation:namecolor 3s linear  infinite ;
 @keyframes namecolor{
 
     0%{
-        background-image: linear-gradient(to right,violet,aqua,steelblue);
+        background-image: linear-gradient(to right,red,orange,yellow);
     }
 
     25%{
@@ -202,7 +214,7 @@ animation:namecolor 3s linear  infinite ;
 
     }
 50%{
-    background-image: linear-gradient(to right,aqua,steelblue,violet);
+    background-image: linear-gradient(to right,yellow,orange,aqua);
 
 }
 75%{
@@ -210,7 +222,7 @@ animation:namecolor 3s linear  infinite ;
 
 }
 100%{
-    background-image: linear-gradient(to right,steelblue,violet,aqua);
+    background-image: linear-gradient(to right,orange,steelblue,violet);
 
 }
 }
@@ -223,7 +235,8 @@ animation:namecolor 3s linear  infinite ;
 
 text-align: center;
  padding:20px;
- 
+ animation: dhe_vannu2 1.2s  ease-in-out .5s backwards  ;
+    
 
     border-left: 5px dashed var(--shade) ;
 }
@@ -236,8 +249,19 @@ text-align: center;
     border-radius: 10px;
     align-items: center;
     
+    
 }
 
+@keyframes dhe_vannu2{
+
+    0%{
+        transform: translateX(1000px);
+    }
+    
+    100%{
+        display: initial;
+    }
+}
 
     
 
@@ -280,18 +304,50 @@ transform: translateX(-50%);
 
     font-size: xx-large;
     text-align: center;
+    color: var(--green);
+    /* border-bottom: 5px double var(--vibe); */
 }
 
 .area-skill{
     
     grid-area: skill;
-    background-color: var(--green);
+    background-color: var(--shade);
     padding: 5%;
-    border-radius:10px;
-    height: 1000px;
-    /* overflow: scroll; */
+    /* border-radius:10px; */
+    height: 500px;
+    overflow: scroll;
+    opacity: .6;
+    border:10px double var(--bgcolor);
+    animation: dhe_vannu3 1.2s ease-in-out .5s backwards;
 }
 
+
+@keyframes dhe_vannu3{
+
+    0%{
+        transform: translateY(2000px);
+    }
+
+    100%{
+
+        display: initial;
+    }
+}
+
+
+
+
+
+
+
+.area-skill:hover{
+
+    opacity: 1;
+}
+.area-skill::-webkit-scrollbar{
+
+    display:none;
+}
 .skillall{
 
     
@@ -314,12 +370,13 @@ transform: translateX(-50%);
 .skilltext{
 
     padding: 10px;
+    color:var(--vibe);
    
 }
 
 .skilltext h2{
-color: var(--bgcolor);
-    text-decoration: underline var(--bgcolor);
+color: var(--green);
+    /* text-decoration: underline var(--green); */
 }
 .skill{
     /* width:100%; */
@@ -358,13 +415,23 @@ margin-top: 10px;
     padding: 20px;
     text-align: center;
     color:var(--green);
-border-radius:10px;
-border:3px solid var(--green);
-height:1000px;
+/* border-radius:10px; */
+border:2px solid var(--green);
+opacity: .6;
+animation: dhe_vannu3 1.2s ease-in-out .5s backwards;
+
+height:500px;
 overflow: scroll;
 }
 
+.area-proj:hover{
 
+    opacity: 1;
+}
+.area-proj::-webkit-scrollbar{
+
+    display:none;
+}
 .area-proj img{
 
     width:80%;
@@ -372,21 +439,18 @@ overflow: scroll;
     border-radius: 5px;
 }
 
-.area-proj button{
+.area-proj h3{
 
-    padding: 10px;
-    background-color: var(--green);
-    color: var(--bgcolor);
-    border-radius: 15px;
-    border:2px solid var(--bgcolor)
+    padding: 5px;
+    background-color: var(--bgcolor);
+    color: var(--green);
+    
 }
 
 
-.area-proj button:hover{
+.area-proj h3:hover{
 
-    background-color: var(--bgcolor);
-    color:var(--green);
-    border:2px solid var(--green);
+    
     transform: scale(1.2);
 }
 
@@ -477,7 +541,10 @@ overflow: scroll;
     height: auto;
 }
 
+.area-proj{
 
+    height:auto;
+}
    /* content */
    
 
