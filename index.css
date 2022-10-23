@@ -115,21 +115,30 @@ display:none;
 
 
 #menubar:checked  + .maa .header{
+    
     position: fixed;
-    top:0px;
-    transform: translateX(-40px);
-display:block;
+    transform: rotate(90deg) translateY(-30%);
+    transform-origin:left;
+   height: 32px;
+display:flex;
+align-items: center;
+justify-content: space-around;
 font-size: x-small;
-margin: 0;
+
+width: 600px;
+/* width:10px; */
+/* background-color:var(--green) */
 }
 
 
-
 #menubar:checked  + .maa .header div{
-    margin-top: 50px;
+    
+    /* margin-left: 0px; */
+   
     text-align: center;
-    width:120px;
-    transform: rotate(90deg);
+    /* width:20%; */
+    
+    /* background-color: aqua; */
 }
 #menubar:checked  + .maa .header div:hover{
 
@@ -255,6 +264,8 @@ text-align: center;
     opacity: .8;
     border-radius: 50%;
     align-items: center;
+    box-shadow: 5px 5px 25px   var(--green);
+    border:3px solid var(--green);
     
     
 }
@@ -325,7 +336,7 @@ transform: translateX(-50%);
     overflow: scroll;
     opacity: .6;
     border:10px double var(--bgcolor);
-    animation: dhe_vannu3 1.2s ease-in-out .5s backwards;
+    animation: dhe_vannu3 1.2s ease-in-out 1s backwards;
 }
 
 
@@ -442,7 +453,7 @@ margin-top: 10px;
 
 .expall .work{
 
-    padding:30px;
+    padding:50px;
     width:100%;
     /* background-color: antiquewhite; */
  
@@ -453,19 +464,91 @@ margin-top: 10px;
 .expall .work .comp{
 
     font-size: large;
-    /* font-weight: 100; */
-    /* padding:10px; */
+    
     text-align: left;
-    color: steelblue;
+    color: white;
 
+}
+
+.expall .work .comp:hover{
+
+    color:var(--green);
+}
+
+input:checked ~ .comp:hover{
+
+    color:var(--green);
 }
 
 .expall .work .job{
-margin-top:10px;
-    padding: 10px;
+margin-top:30px;
     
+    /* position: relative; */
     text-align: left;
+    
 }
+
+.lumhide{
+
+    color:steelblue;
+}
+
+.tcshide{
+
+    color:steelblue;
+}
+
+.keltronhide{
+
+    color:steelblue;
+}
+/* luminar technolab hide */
+
+
+#lumhide{
+
+    display: none;
+}
+
+#lumhide:checked + .comp{
+    color:white;
+}
+#lumhide:checked ~ .lumhide .lum{
+
+display: none;
+}
+
+/* tcs hide */
+
+#tcshide{
+
+    display: none;
+}
+
+#tcshide:checked ~ .tcshide .tcs{
+
+display: none;
+}
+
+#tcshide:checked ~ .comp{
+    color:white;
+}
+
+/* keltron hide */
+
+#keltronhide{
+
+    display: none;
+}
+
+#keltronhide:checked + .comp{
+    color:white;
+}
+#keltronhide:checked ~ .keltronhide .keltron{
+
+display: none;
+}
+
 
 
 
@@ -482,7 +565,7 @@ margin-top:10px;
 /* border-radius:10px; */
 border:2px solid var(--green);
 opacity: .6;
-animation: dhe_vannu3 1.2s ease-in-out .5s backwards;
+animation: dhe_vannu3 1.2s ease-in-out 1s backwards;
 
 height:500px;
 overflow: scroll;
@@ -644,6 +727,15 @@ margin-top:30px;
 
     display: block;
 }
+p{
+    font-size: large;
+}
+
+
+.expall .work{
+
+    padding: 10px;
+}
 }
 
 
@@ -712,6 +804,13 @@ margin-top:30px;
 
         height:auto;
      }
+
+     p{
+
+        font-size:large;
+     }
+
+    
 }
 
 
