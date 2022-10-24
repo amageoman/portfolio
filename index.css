@@ -1,9 +1,14 @@
 :root{
-    --bgcolor:#01070f;
+    /* --bgcolor:#01070f;
     --green:#54dfbe;
     --shade: #64c8da33;
     --vibe:rgb(255, 255, 255);
-    --sooper:rgb(2, 44, 13);
+    --sooper:rgb(2, 44, 13); */
+
+    --bgcolor:rgb(9, 12, 39);
+    --green:rgb(86, 155, 211);
+    --shade:rgba(114, 114, 179, 0.339);
+    --vibe:aliceblue;
 }
 
 *{
@@ -21,6 +26,29 @@ body{
 }
 
 
+.welcome{
+position: absolute;
+    Width:100%;
+    height:700px;
+    margin-top: -100px;
+    animation: 1.6s welcome  ease forwards;
+    position: absolute;
+    z-index: -1;
+    /* display: none; */
+}
+
+
+@keyframes welcome{
+
+    0%
+    {
+        opacity:1;
+    }
+    100%{
+
+        opacity: 0;
+    }
+}
 /* links  set */
 
 .maa{
@@ -154,7 +182,7 @@ width: 600px;
 /* content */
 
 .content{
-
+position: relative;
     padding: 20px;
 margin-top:100px;
 margin-left: 30px;
@@ -165,14 +193,15 @@ margin-right: 30px;
     "exp exp exp"
     "qual qual bio";
 
-    gap:30px;
+    gap:20px;
 }
 
 .area-hi{
+    margin-top: 40px;
     grid-area: hi;
     padding-top: 10px;
     padding-bottom: 30px;
-    animation:dhe_vannu 1.2s ease-in-out .5s backwards ;
+    animation:dhe_vannu 1.2s ease-in-out .8s backwards ;
     /* background-color: aliceblue; */
 }
 
@@ -195,22 +224,24 @@ margin-right: 30px;
 
     font-size: 2rem;
     font-weight: 300;
+    /* width:500px; */
+    /* height: 300px; */
     color:var(--green);
-    
-    text-align: center;
-    
+    /* background-color: aqua; */
+    text-align: left;
+    margin-left: 200px;
 }
 
 
 
 .name{
     
-    font-size:6rem;
+    font-size:3rem;
     -webkit-text-stroke:1px  white;
     color:transparent;
 background-clip: text;
 -webkit-background-clip: text;
-animation:namecolor 3s linear  infinite ;
+/* animation:namecolor 3s linear  infinite ; */
  font-family:cursive;
 
 }
@@ -222,7 +253,7 @@ animation:namecolor 3s linear  infinite ;
 @keyframes namecolor{
 
     0%{
-        background-image: linear-gradient(to right,red,orange,yellow);
+        background-image: linear-gradient(to right,var(--green),var(--shade),yellow);
     }
 
     25%{
@@ -251,7 +282,7 @@ animation:namecolor 3s linear  infinite ;
 
 text-align: center;
  padding:20px;
- animation: dhe_vannu2 1.2s  ease-in-out .5s backwards  ;
+ animation: dhe_vannu2 1.2s  ease-in-out .8s backwards  ;
     
 
     border-left: 5px dashed var(--shade) ;
@@ -264,8 +295,8 @@ text-align: center;
     opacity: .8;
     border-radius: 50%;
     align-items: center;
-    box-shadow: 5px 5px 25px   var(--green);
-    border:3px solid var(--green);
+    box-shadow: 7px 7px 35px   var(--green);
+    border:5px double rgb(255, 255, 255);
     
     
 }
@@ -366,50 +397,159 @@ transform: translateX(-50%);
 
     display:none;
 }
-.skillall{
 
-    
-   display: flex;
-   justify-content: space-around;
-   
 
+.skillbox{
+/* padding: 20px; */
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    height:80%;
+    /* background-color: aqua; */
+
+}
+.skillimg img{
+
+    width:100%;
+    height:100%;
 }
 
 .skillball{
+/* padding: 10px; */
+    width:50%;
+    overflow: scroll;
+    /* background-color: var(--bgcolor); */
+    font-size: small;
+}
+
+.skillball::-webkit-scrollbar{
+
+    display:none;
+}
+
+
+.skillrow{
+
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: 10px;
+    margin-block: 30px;
+}
+
+.skillcol{
+
     
-    display:block;
-    justify-content: space-around;
-    /* background-color: black; */
-    width: 50%;
-    border-right:5px dashed var(--bgcolor);
-    padding: 10px;
-}
-
-.skilltext{
-
-    padding: 10px;
-    color:var(--vibe);
-   
-}
-
-.skilltext h2{
-color: var(--green);
-    /* text-decoration: underline var(--green); */
-}
-.skill{
-    /* width:100%; */
-    padding: 20px;
-    border:2px solid transparent;
-    border-radius: 20px;
-background-color: var(--bgcolor);
-color:var(--green);
-text-align:center;
-margin-top: 10px;
+   padding-block: 5px;
+    position: relative;
+    
+    border-radius: 10px;
+    /* height: 50%; */
+    width:40%;
 }
 
 
 
 
+.rate{
+    
+    padding-block: 10px;
+    
+    overflow: hidden;
+    color:transparent;
+    position: absolute;
+/* left:5%; */
+color:transparent;
+    width:100%;
+  border-radius:20px;
+    border:1px solid white;
+}
+
+.anim{
+    text-align: center;
+    width:100%;
+    border-radius:20px;
+      border:1px solid white;
+    position: absolute;
+    padding-block: 10px;
+    background-image: linear-gradient(to right, var(--bgcolor) 99%,transparent 1%);
+    /* z-index: -1; */
+    color:white;
+    animation : rate  10s steps(5, end) 3s  infinite ;
+}
+
+.row1 .col-1 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+
+}
+
+.row1 .col-2 .rate-1{
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 60% ,  var(--bgcolor) 40% );
+
+}
+
+.row2 .col-1 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 40% ,  var(--bgcolor) 60% );
+
+}
+.row2 .col-2 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 25% ,  var(--bgcolor) 75% );
+
+}
+.row3 .col-1 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 10% ,  var(--bgcolor) 90% );
+
+}
+.row3 .col-2 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+
+}
+.row4 .col-1 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+
+}
+.row4 .col-2 .rate-1{
+
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+
+}
+.anim:hover{
+
+    animation-play-state: paused;
+}
+
+
+
+
+@keyframes rate{
+    0%{
+        background-image: linear-gradient(to right, transparent 1%, var(--bgcolor) 99%);
+    }
+    20%{
+        background-image: linear-gradient(to right, transparent 20%, var(--bgcolor) 75%);
+
+    }
+    40%{
+        background-image: linear-gradient(to right, transparent 40%, var(--bgcolor) 60%);
+
+    }
+    60%{
+        background-image: linear-gradient(to right, transparent 60%, var(--bgcolor) 40%);
+
+    }
+    80%{
+        background-image: linear-gradient(to right, transparent 80%, var(--bgcolor) 20%);
+    }
+    100%{
+        background-image: linear-gradient(to right, transparent 99%, var(--bgcolor) 1%);
+
+    }
+}
 
 /* experience section */
 
@@ -419,15 +559,20 @@ margin-top: 10px;
 .area-exp{
     grid-area: exp;
     background-color: var(--bgcolor);
-    height:auto;
+    height:500px;
+    overflow: scroll;
     width: 100%;
     color:var(--vibe);
-    border: 2px solid var(--shade);
-    padding: 5%;
+    border: 4px double var(--shade);
+    padding: 1%;
     opacity: 0.6;
    
 }
 
+.area-exp::-webkit-scrollbar{
+
+    display: none;
+}
 .area-exp:hover{
     opacity: 1;
 
@@ -447,7 +592,7 @@ margin-top: 10px;
 
 .gif img{
     width:100%;
-    height: 100%;
+    height: 350px;
     
 }
 
@@ -463,44 +608,73 @@ margin-top: 10px;
 
 .expall .work .comp{
 
-    font-size: large;
+    font-size: medium;
     
     text-align: left;
-    color: white;
+    
+    /* color:var(--shade); */
+    /* background-color: var(--green); */
+    /* width:100%; */
 
 }
 
-.expall .work .comp:hover{
 
-    color:var(--green);
-}
 
-input:checked ~ .comp:hover{
-
-    color:var(--green);
-}
 
 .expall .work .job{
-margin-top:30px;
+margin-top:100px;
     
-    /* position: relative; */
+    position: relative;
     text-align: left;
-    
+    /* background-color: cyan; */
+    height:30px;
+    /* overflow: hidden; */
+}
+
+.expall .work .job:first-child{
+
+    margin-top:-40px;
+}
+
+
+.lumlabel i{
+
+    position: absolute;
+    right:0px;
+    TOP:5%;
+}
+
+.lumlabel .lumup{
+
+    opacity:0;
 }
 
 .lumhide{
 
-    color:steelblue;
+    color:var(--green);
+   
+   
 }
+
+
+
+
 
 .tcshide{
 
-    color:steelblue;
+    color:var(--green);
+
+    
 }
+
+
+
 
 .keltronhide{
 
-    color:steelblue;
+    color:var(--green);
+
+    
 }
 /* luminar technolab hide */
 
@@ -508,6 +682,7 @@ margin-top:30px;
 #lumhide{
 
     display: none;
+    
 }
 
 #lumhide:checked + .comp{
@@ -516,6 +691,31 @@ margin-top:30px;
 #lumhide:checked ~ .lumhide .lum{
 
 display: none;
+}
+
+
+#lumhide:checked ~ .lumdown{
+
+    opacity: 1;
+}
+
+#lumhide:checked ~ .lumup{
+
+    opacity: 0;
+}
+
+.lumlabel .lumup{
+
+    opacity:1;
+}
+.lumlabel .lumdown{
+
+    opacity:0;
+}
+
+#lumhide:checked + .job{
+
+    width:auto;
 }
 
 /* tcs hide */
@@ -534,6 +734,34 @@ display: none;
     color:white;
 }
 
+
+.tcslabel i{
+
+    position: absolute;
+    right:0px;
+    TOP:5%;
+}
+
+#tcshide:checked ~ .tcsdown{
+
+    opacity: 1;
+}
+
+#tcshide:checked ~ .tcsup{
+
+    opacity: 0;
+}
+
+.tcslabel .tcsup{
+
+    opacity:1;
+}
+.tcslabel .tcsdown{
+
+    opacity:0;
+}
+
+
 /* keltron hide */
 
 #keltronhide{
@@ -550,6 +778,32 @@ display: none;
 }
 
 
+.keltronlabel i{
+
+    position: absolute;
+    right:0px;
+    TOP:5%;
+}
+
+
+#keltronhide:checked ~ .keltrondown{
+
+    opacity: 1;
+}
+
+#keltronhide:checked ~ .keltronup{
+
+    opacity: 0;
+}
+
+.keltronlabel .keltronup{
+
+    opacity:1;
+}
+.keltronlabel .keltrondown{
+
+    opacity:0;
+}
 
 
 /* project */
@@ -660,6 +914,18 @@ overflow: scroll;
     /* header */
 
    
+    .welcome{
+
+        Width:100%;
+        height:800px;
+        margin-top: -80px;
+        animation: 1.2s welcome  ease-in-out forwards;
+        position: absolute;
+        /* z-index: 2; */
+        /* display: none; */
+    }
+
+
 .maa .header{
 
     display: none;
@@ -674,19 +940,16 @@ overflow: scroll;
  }
 
 
+.area-hi .hello{
+
+margin-left: 0px;
+text-align: center;}
+
  /* skillset */
 
 
 
- .skillball{
 
-    width:100%;
-    border:0px;
- }
-.skillall{
-
-    display: block;
-}
 
 .area-skill{
 
@@ -727,23 +990,67 @@ margin-top:30px;
 
     display: block;
 }
-p{
-    font-size: large;
+
+.expall .work .job:first-child{
+
+    margin-top:0px;
+}
+.expall .work .job{
+
+   height:auto;
+   margin-top: 0px;
 }
 
+.expall .work .comp{
 
+    font-size: medium;
+}
+.area-exp p{
+    font-size: medium;
+}
+
+p{
+    font-size: medium;
+}
 .expall .work{
 
     padding: 10px;
 }
+
+.skillbox{
+    padding: 20px;
+        display: block;
+        justify-content: space-evenly;
 }
+
+
+
+
+.skillball{
+    /* padding: 10px; */
+        width:100%;
+        
+        /* background-color: var(--bgcolor); */
+        font-size: x-small;
+    }
+
+
+
+
+
+
+
+
+}
+
+
 
 
 /* tab view */
 
 
 
-@media(min-width:450px) and (max-width:900px){
+@media(min-width:450px) and (max-width:1000px){
 
     
    body{
@@ -771,13 +1078,25 @@ p{
         border-left:0px;
     }
 
-    .skill{
 
-        font-size: medium;
-        /* width:50%; */
-        
-        
-     }
+    .area-hi .hello{
+
+        margin-left: 0px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.area-hi .hello p{
+
+    
+font-size: x-large;
+}
+
+.area-exp{
+
+    height: auto;
+}
+   
      .area-skill{
 
         
@@ -789,16 +1108,9 @@ p{
         display: block;
     }
 
-    .skillall{
+   
 
-        display: block;
-    }
-
-    .skillball{
-
-        width:100%;
-        border:0px;
-     }
+    
 
      .area-proj{
 
@@ -810,6 +1122,18 @@ p{
         font-size:large;
      }
 
+     .skillimg{
+
+        width:50%;
+     }
+     .skillball{
+        /* padding: 10px; */
+            width:50%;
+            
+            /* background-color: var(--bgcolor); */
+            font-size: smaller;
+        }
+    
     
 }
 
