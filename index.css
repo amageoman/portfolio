@@ -57,7 +57,7 @@ position: absolute;
     width: 100%;
     background-color: var(--bgcolor);
     border-bottom: 5px dashed var(--shade);
-    z-index: 1;
+    z-index: 2;
 }
 
 .header{
@@ -459,68 +459,73 @@ transform: translateX(-50%);
     position: absolute;
 /* left:5%; */
 color:transparent;
+padding-block: 10px;
     width:100%;
-  border-radius:20px;
-    border:1px solid white;
+  /* border-radius:40px; */
+    border:1px solid transparent;
+    border-right: 0px;
+    animation : rate  5s linear 3s  infinite ;
+z-index: 1;
 }
 
 .anim{
     text-align: center;
     width:100%;
-    border-radius:20px;
-      border:1px solid white;
+    /* border-radius:20px; */
+      border:2px solid white;
     position: absolute;
     padding-block: 10px;
-    background-image: linear-gradient(to right, var(--bgcolor) 99%,transparent 1%);
+    background-color: transparent;
+    /* background-image: linear-gradient(to right, var(--bgcolor) 99%,transparent 1%); */
     /* z-index: -1; */
     color:white;
-    animation : rate  10s steps(5, end) 3s  infinite ;
+    /* animation : rate  10s steps(5, end) 3s  infinite ; */
 }
 
 .row1 .col-1 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+    background-image:linear-gradient(to right, rgba(0, 255, 0, 0.336) 75% ,  transparent 25% );
 
 }
 
 .row1 .col-2 .rate-1{
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 60% ,  var(--bgcolor) 40% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 60% , transparent 40% );
 
 }
 
 .row2 .col-1 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 40% ,  var(--bgcolor) 60% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 50% ,  transparent 50% );
 
 }
 .row2 .col-2 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 25% ,  var(--bgcolor) 75% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 50% ,  transparent 50% );
 
 }
 .row3 .col-1 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 10% ,  var(--bgcolor) 90% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 50% ,  transparent 50% );
 
 }
 .row3 .col-2 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 75% , transparent 25% );
 
 }
 .row4 .col-1 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 75% ,  transparent 25% );
 
 }
 .row4 .col-2 .rate-1{
 
-    background-image:linear-gradient(to right, rgb(0, 255, 0,.5) 75% ,  var(--bgcolor) 25% );
+    background-image:linear-gradient(to right, rgb(0, 255, 0,.336) 75% ,  transparent 25% );
 
 }
-.anim:hover{
+.rate:hover{
 
-    animation-play-state: paused;
+    animation-play-state:paused;
 }
 
 
@@ -528,9 +533,10 @@ color:transparent;
 
 @keyframes rate{
     0%{
-        background-image: linear-gradient(to right, transparent 1%, var(--bgcolor) 99%);
+        /* background-image: linear-gradient(to right, transparent 1%, var(--bgcolor) 99%); */
+    width:10%;
     }
-    20%{
+    /* 20%{
         background-image: linear-gradient(to right, transparent 20%, var(--bgcolor) 75%);
 
     }
@@ -544,10 +550,10 @@ color:transparent;
     }
     80%{
         background-image: linear-gradient(to right, transparent 80%, var(--bgcolor) 20%);
-    }
-    100%{
-        background-image: linear-gradient(to right, transparent 99%, var(--bgcolor) 1%);
-
+    } */
+    50%{
+        /* background-image: linear-gradient(to right, transparent 99%, var(--bgcolor) 1%); */
+width:100%;
     }
 }
 
@@ -1041,6 +1047,14 @@ p{
 
 
 
+}
+
+@media(hover:none){
+
+    .area-exp,.area-skill,.area-proj{
+
+        opacity: 1;
+    }
 }
 
 
