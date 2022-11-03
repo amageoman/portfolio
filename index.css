@@ -19,9 +19,9 @@
 
     /* color two */
    
-    --bgcolor:rgba(255,255,255,0.2);
+    /* --bgcolor:rgba(255,255,255,1); */
     --green:skyblue;
-    --shade:rgba(200,200,200,0.1);
+    --shade:rgba(211, 193, 193, 0.095);
     --vibe:aliceblue;
 --top:rgb(29, 217, 217);
    /* color three */
@@ -55,6 +55,11 @@ body{
 
 }
 
+
+p{
+
+    word-spacing: 2px;
+}
 
 .welcome{
 position: absolute;
@@ -209,6 +214,9 @@ width: 600px;
     
     /* background-color: aqua; */
 }
+
+
+
 #menubar:checked  + .maa .header div:hover{
 
     box-shadow: 0px 0px 0px;
@@ -245,6 +253,7 @@ margin-right: 30px;
     grid-area: hi;
     padding-top: 10px;
     padding-bottom: 30px;
+    
     animation:dhe_vannu 1.2s ease-in-out .8s backwards ;
     /* background-color: aliceblue; */
 }
@@ -417,16 +426,16 @@ transform: translateX(-50%);
 .area-skill{
     position: relative;
     width: 100%;
-    height:500px;
+    height:600px;
 
     grid-area: skill;
     background-color: var(--shade);
     padding: 5%;
     
     /* height: 500px; */
-    overflow: scroll;
     
-    border:5px double var(--bgcolor);
+    
+    border:5px double var(--shade);
     border-radius: 10px;
     animation: dhe_vannu3 1.2s ease-in-out 1s backwards;
 }
@@ -461,23 +470,26 @@ transform: translateX(-50%);
     display: flex;
     justify-content: space-evenly;
     width:100%;
-    height:80%;
-    /* background-color: aqua; */
+    /* height:80%; */
+    
 
 }
 .skillp {
 font-size: large;
 color:var(--vibe);
 padding: 10px;
-    width:700px;
+    width:50%;
+    
     height:auto;
+    
 }
 
 .skillball{
 /* padding: 10px; */
     width:50%;
+    
     /* overflow: scroll; */
-    /* background-color: var(--bgcolor); */
+    
     font-size: small;
 }
 
@@ -524,7 +536,7 @@ padding: 10px;
     overflow: scroll;
     width: 100%;
     color:var(--vibe);
-    border: 4px double var(--shade);
+    border: 5px double var(--shade);
     border-radius: 10px;
     padding: 1%;
     /* opacity: 0.6; */
@@ -785,7 +797,7 @@ border-radius:10px;
 
 animation: dhe_vannu3 1.2s ease-in-out 1s backwards;
 
-/* overflow: scroll; */
+overflow: hidden;
 
 }
 
@@ -919,7 +931,7 @@ background-color: #ddd;
 
 .top a{
 
-padding: 80px;
+
     text-decoration: none;
     color:#303030;
 }
@@ -1002,12 +1014,86 @@ transform-origin: left;
 
 .area-qual{
     grid-area: qual;
+    background-color: var(--shade);
+    height: auto;
+    padding: 20px;
+    color:var(--top);
+    
+    border:5px double var(--shade);
+    border-radius: 10px;
 }
+
+.education{
+
+    padding:20px;
+    text-align: left;
+}
+
+.education h3{
+
+    text-decoration: underline;
+    
+}
+
+.education p{
+    font-size: large;
+    color:var(--vibe);
+}
+
+
+
+
+
+
+
+/* bio */
+
 
 
 .area-bio{
 
+    /* width:; */
     grid-area: bio;
+    background-color: var(--shade);
+    border: 5px double var(--shade);
+    border-radius: 10px;
+    color:var(--top);
+    padding: 20px;
+    text-align: center;
+}
+
+.aboutme{
+    
+
+    padding: 20px;
+    text-align: left;
+}
+
+.aboutme h3{
+
+    text-decoration: underline;
+    
+}
+
+.aboutme p{
+    font-size: large;
+    color:var(--vibe);
+}
+
+.resume button{
+background-color: transparent;
+    padding: 10px;
+    padding-inline: 20px;
+    border:2px solid var(--vibe);
+    border-radius: 60px;
+    color: var(--vibe);
+    
+}
+
+.resume button:hover{
+
+    color: black;
+    background-color: var(--vibe);
 }
 
 
@@ -1016,13 +1102,22 @@ transform-origin: left;
 
 
 
+footer{
+color:var(--vibe);
+    text-align: center;
+    margin-bottom:0px;
+    width:100%;
+    
+    
+    
+    border-top: 5px double var(--vibe);
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,0.7))url(./images/bg.jpg);
+}
 
-
-
-
-
-
-
+footer span{
+color:var(--top);
+font-size: 20px;
+}
 
 
 
@@ -1092,6 +1187,7 @@ font-size: 20px;
 
     height:auto;
     padding-block: 40px;
+    overflow: hidden;
 }
    /* content */
 
@@ -1211,6 +1307,16 @@ width:auto;
     width:100%;
     height: 100%;
 }
+
+footer{
+
+    font-size: 15px;
+}
+
+footer span{
+    color:var(--top);
+    font-size: 15px;
+    }
     
 }
 
