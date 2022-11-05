@@ -21,7 +21,7 @@
 
     /* --bgcolor:rgba(255,255,255,1); */
     --green: skyblue;
-    --shade: rgba(211, 193, 193, 0.095);
+    /* --shade: rgba(211, 193, 193, 0.095); */
     --vibe: aliceblue;
     --top: rgb(29, 217, 217);
     /* color three */
@@ -54,6 +54,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url(./images/bg2.jpg);
     background-size: auto;
     /* background-attachment: fixed; */
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -113,7 +114,7 @@ p {
     top: 0px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/bg2.jpg);
-    border-bottom: 5px double var(--shade);
+    border-bottom: 5px double var(--vibe);
     z-index: 2;
     animation: vannu 1.5s ease .8s backwards;
 }
@@ -263,8 +264,8 @@ p {
     height: auto;
     padding: 20px;
     margin-top: 100px;
-    margin-left: 30px;
-    margin-right: 30px;
+   margin-inline: auto;
+    max-width: 1300px;
     display: grid;
     grid-template-areas: "hi hi img"
         "skill skill skill"
@@ -381,7 +382,7 @@ p {
     border-radius: 50%;
     align-items: center;
     /* box-shadow: 10px 10px 40px   var(--vibe); */
-    border: 5px double var(--shade);
+    border: 5px double var(--vibe);
 
 
 }
@@ -438,7 +439,11 @@ p {
 
     font-size: xx-large;
     text-align: center;
+    /* font-family: 'Lobster', cursive; */
+    /* text-decoration:underline; */
     color: var(--green);
+    width: 100%;
+    
     /* position: sticky; */
     /* top:0px; */
     /* z-index: 1; */
@@ -448,7 +453,7 @@ p {
 .area-skill {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 700px;
 
     grid-area: skill;
     background-color: var(--shade);
@@ -457,7 +462,7 @@ p {
     /* height: 500px; */
 
 
-    border: 5px double var(--shade);
+    border: 5px double var(--vibe);
     border-radius: 10px;
     animation: dhe_vannu3 1.2s ease-in-out 1s backwards;
 }
@@ -577,7 +582,7 @@ transform-style: preserve-3d;
     overflow: scroll;
     /* width: 100%; */
     color: var(--vibe);
-    border: 5px double var(--shade);
+    border: 5px double var(--vibe);
     border-radius: 10px;
     padding: 1%;
     /* opacity: 0.6; */
@@ -1072,7 +1077,7 @@ transform-style: preserve-3d;
     padding: 20px;
     color: var(--top);
 
-    border: 5px double var(--shade);
+    border: 5px double var(--vibe);
     border-radius: 10px;
 }
 
@@ -1084,7 +1089,7 @@ transform-style: preserve-3d;
 
 .education h3 {
 
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: larger;
 
 }
@@ -1109,7 +1114,7 @@ transform-style: preserve-3d;
 
     grid-area: bio;
     background-color: var(--shade);
-    border: 5px double var(--shade);
+    border: 5px double var(--vibe);
     border-radius: 10px;
     color: var(--top);
     padding: 20px;
@@ -1125,7 +1130,7 @@ transform-style: preserve-3d;
 
 .aboutme h3 {
 
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: larger;
 
 }
@@ -1238,10 +1243,16 @@ footer span {
     .area-skill {
 
         height: auto;
+        border:0px;
     }
 
     .skillp {
         width: auto;
+        
+
+    }
+
+    .skillp p{
         font-size: large;
     }
 
@@ -1250,10 +1261,16 @@ footer span {
         height: auto;
         padding-block: 40px;
         overflow: hidden;
+        border:0px;
     }
 
     /* content */
 
+   .cardheading{
+    padding-bottom: 10px;
+    border-bottom: 5px double var(--vibe);
+
+   }
 
     .content {
         margin-left: 30px;
@@ -1272,7 +1289,7 @@ footer span {
 
     .area-exp {
 
-        height: auto;
+        height: auto;border:0px;
     }
 
     .expall {
@@ -1372,6 +1389,11 @@ footer span {
         height: 100%;
     }
 
+    .area-bio,.area-qual{
+
+        border: 0px;
+    }
+
     footer {
 
         font-size: medium;
@@ -1385,9 +1407,9 @@ footer span {
     .arrow {
         position: fixed;
         z-index: 2;
-        bottom: 10px;
+        bottom: 30px;
         right: 10px;
-        font-size: 10px;
+        font-size: 15px;
         /* width:15px; */
         text-align: center;
         /* height:15px; */
