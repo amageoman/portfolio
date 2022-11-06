@@ -141,19 +141,56 @@ p {
 .header a {
     text-decoration: none;
     color: var(--vibe);
+    padding: 20px;
 }
 
 .header div {
-    width: 150px;
+    /* width: 150px; */
     text-align: center;
     padding: 10px;
     transition: .3s ease-in-out;
 }
 
-.header div:hover {
-
+.header div::after{
+    content: '';
+/* position: absolute; */
+    display: block;
+    height: 3px;
     border-radius: 10px;
-    box-shadow: 2px 2px 3px var(--green);
+    width: 100%;
+    background-color: var(--green);
+    transform: scale(0);
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    transform-origin: left;
+}
+.header div:hover::after {
+
+    /* border-radius: 10px; */
+    /* box-shadow: 2px 2px 3px var(--green); */
+    transform: scale(1);
+    
+}
+
+.header div::before{
+    content: '';
+/* position: absolute; */
+    display: block;
+    height: 3px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--green);
+    transform: scale(0);
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    transform-origin: right;
+}
+.header div:hover::before {
+
+    /* border-radius: 10px; */
+    /* box-shadow: 2px 2px 3px var(--green); */
+    transform: scale(1);
+    
 }
 
 .header div:hover a {
