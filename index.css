@@ -1,37 +1,24 @@
 :root {
 
-    /*  color one */
+   
 
-    /* 
-    --bgcolor:#051122;
-    --green:#1ea989;
-    --shade: #64c8da33;
-    --vibe:rgb(229, 226, 226);
-     */
-    /* --bgcolor:rgb(3, 3, 34);
-     
-      --green:rgb(86, 155, 211);
-    --shade:rgba(114, 114, 179, 0.339);
-    --vibe:aliceblue;
-    */
-
-    /* --shade:rgba(78, 78, 161, 0.409); */
-
-    /* color two */
+    /* color main */
 
     /* --bgcolor:rgba(255,255,255,1); */
     --green: skyblue;
     /* --shade: rgba(211, 193, 193, 0.095); */
     --vibe: aliceblue;
-    --top: rgb(29, 217, 217);
-    /* color three */
+    --top: rgb(29, 217, 217); 
 
-    /* --bgcolor:snow;
-   --green:black;
-   --shade:teal;
-   --vibe:black;
- */
 
+    /* color two */
+
+    /* --bgcolor:rgb(180, 15, 90);
+    --green: brown;
+    --shade: #eeeeee;
+    --vibe: black;
+    --top: red; */
+  
 }
 
 html {
@@ -52,6 +39,7 @@ body {
 
     /* background-color:var(--bgcolor) ; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url(./images/bg2.jpg);
+   
     background-size: auto;
     /* background-attachment: fixed; */
     font-family: 'Poppins', sans-serif;
@@ -113,6 +101,7 @@ p {
     position: fixed;
     top: 0px;
     width: 100%;
+    /* background-color: var(--bgcolor); */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/bg2.jpg);
     border-bottom: 5px double var(--vibe);
     z-index: 2;
@@ -346,10 +335,10 @@ p {
 .area-hi .hello {
 
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 800;
     /* width:500px; */
     /* height: 300px; */
-    color: var(--green);
+    color: var(--vibe);
     /* background-color: aqua; */
     text-align: left;
     margin-left: 200px;
@@ -360,14 +349,15 @@ p {
 .name {
 
     font-size: 3rem;
+    font-weight: 900;
     /* -webkit-text-stroke:2px  var(--vibe); */
-    background: linear-gradient(to right, gold, lime, yellow, green);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+    /* background: linear-gradient(to right, gold, lime, yellow, green); */
+    color: var(--top);
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
     /* animation:namecolor 3s  ease-in-out infinite ; */
     /* font-family:cursive; */
-    opacity: .65;
+    /* opacity: .65; */
 
 }
 
@@ -495,7 +485,7 @@ p {
     height: 700px;
 
     grid-area: skill;
-    background-color: var(--shade);
+    /* background-color: var(--shade); */
     padding: 5%;
 
     /* height: 500px; */
@@ -964,6 +954,10 @@ transform-style: preserve-3d;
 
 }
 
+.rotor:hover .sides img{
+
+    display: none;
+}
 .sides {
     background-color: rgba(0, 0, 0, .8);
 
@@ -977,7 +971,7 @@ transform-style: preserve-3d;
     justify-content: center;
     box-shadow: inset 1px 1px 10px #000;
     color: var(--top);
-
+   
 }
 
 .sides img {
@@ -1446,7 +1440,7 @@ footer span {
     .arrow {
         position: fixed;
         z-index: 2;
-        bottom: 30px;
+        bottom: 20px;
         right: 10px;
         font-size: 15px;
         /* width:15px; */
