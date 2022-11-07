@@ -297,6 +297,8 @@ p {
 /* content */
 
 .content {
+
+    top:100px;
     position: relative;
     height: auto;
     padding: 20px;
@@ -314,7 +316,7 @@ p {
 }
 
 .area-hi {
-
+    /* height: 60vh; */
     /* width:180%; */
     margin-top: 40px;
     grid-area: hi;
@@ -1290,7 +1292,7 @@ footer span {
     }
 
     .skillp p{
-        font-size: large;
+        font-size: medium;
     }
 
     .area-proj {
@@ -1452,6 +1454,10 @@ footer span {
         /* height:15px; */
     }
 
+    .area-bio p, .area-qual p{
+
+        font-size: medium;
+    }
 
 
 
