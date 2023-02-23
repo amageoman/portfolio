@@ -1240,6 +1240,25 @@ transform-style: preserve-3d;
     background-color: var(--vibe);
 }
 
+.resume  a{
+
+   
+    color: var(--vibe);
+}
+.resume button:hover a{
+
+    color: black;
+ 
+}
+
+.mail{
+    color:var(--top);
+    text-decoration: none;
+}
+.mail:hover{
+   
+    color:var(--vibe);
+}
 
 
 
